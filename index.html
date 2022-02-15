@@ -2,41 +2,81 @@
 <html>
 <head>
 <meta charset='utf-8' />
-<link href='../lib/main.css' rel='stylesheet' />
-<script src='../lib/main.js'></script>
-<script>
+<link href='/lib/main.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
+<script src='/lib/main.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment@5.5.0/main.global.min.js'></script>
+<script src='/lib/locales/sv.js'></script>
+<script type='text/javascript'>
 
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: 'sv',
+//      contentHeight: 600,
+      aspectRatio: 0.9,
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
+      // API Key restricted to brakelessmc.github.io
+      googleCalendarApiKey: 'AIzaSyCj2Rv2uig5oIMda0ZY51xTVb44kJY4nfw',
+      firstDay: 1,
+      eventSources: [
+        // Svenska helgdagar
+        {
+          googleCalendarId: 'qkkuq459qo5c2kteqbfvgn8mt29ctcka@import.calendar.google.com',
+          color: '#ac725e'
+        },
+        // Stuga 1
+        {
+          googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+          color: '#4986e7',
+          eventDisplay: 'block'
+        },
+        // Stuga 2
+        {
+          googleCalendarId: 'c_bu9ij0rgbk4vi9mpj0ermv9bak@group.calendar.google.com',
+          color: '#ffad46',
+          eventDisplay: 'block'
+        },
+        // Stuga 3
+        {
+          googleCalendarId: 'c_jqt2nvgic3squ0bqv968rob040@group.calendar.google.com',
+          color: '#f83a22',
+          eventDisplay: 'auto'
+        }
+      ],
 
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,listYear'
-      },
 
-      displayEventTime: false, // don't show the time column in list view
+      events: [
+// 2021 PRE
+        {
+          start: '2021-01-01',
+          end: '2021-04-01',
+          overlap: false,
+          display: 'background',
+          color: '#EE3333'
+        },
+// 2021 POST & 2022 PRE
+        {
+          start: '2021-10-01',
+          end: '2022-04-01',
+          overlap: false,
+          display: 'background',
+          color: '#EE3333'
+        },
+// 2022 POST & 2023 PRE
+{
+          start: '2022-10-01',
+          end: '2023-04-01',
+          overlap: false,
+          display: 'background',
+          color: '#EE3333'
+        }
+      ],
 
-      // THIS KEY WON'T WORK IN PRODUCTION!!!
-      // To make your own Google API key, follow the directions here:
-      // http://fullcalendar.io/docs/google_calendar/
-      googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
-
-      // US Holidays
-      events: 'en.usa#holiday@group.v.calendar.google.com',
-
-      eventClick: function(arg) {
-        // opens events in a popup window
-        window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
-
-        arg.jsEvent.preventDefault() // don't navigate in main tab
-      },
-
-      loading: function(bool) {
-        document.getElementById('loading').style.display =
-          bool ? 'block' : 'none';
+      eventClick: function(info) {
+        info.jsEvent.preventDefault(); // don't let the browser navigate
       }
 
     });
@@ -45,10 +85,12 @@
   });
 
 </script>
+
+
 <style>
 
   body {
-    margin: 40px 10px;
+    margin: 10px 10px;
     padding: 0;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
@@ -62,7 +104,6 @@
   }
 
   #calendar {
-    max-width: 1100px;
     margin: 0 auto;
   }
 
