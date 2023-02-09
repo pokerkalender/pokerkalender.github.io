@@ -1,0 +1,13 @@
+name: Default Enviroment variables
+
+on: push
+
+jobs:
+  default-env-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Secrets
+        run: |
+          echo "$GOOGLECALENDARAPIKEY"
+        env:
+          GOOGLECALENDARAPIKEY: ${{secrets.GOOGLECALENDARAPIKEY}}
