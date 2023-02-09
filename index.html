@@ -21,7 +21,7 @@
       weekNumbers: true,
       weekNumberCalculation: 'ISO',
       // API Key restricted to pokerkalender.github.io
-      googleCalendarApiKey: ${{googleCalendarApiKey}},
+      googleCalendarApiKey: process.env.GOOGLECALENDARAPIKEY,
       firstDay: 1,
       eventSources: [
         // Svenska helgdagar
@@ -31,25 +31,25 @@
         },
         // Livepoker Sverige
         {
-          googleCalendarId: ${{googleCalendarId_live_sweden}},
+          googleCalendarId: process.env.GOOGLECALENDARID_LIVE_SWEDEN,
           color: '#E11C2E',
           eventDisplay: 'block'
         },
         // Klubbpoker
         {
-          googleCalendarId: ${{googleCalendarId_klubbpoker}},
+          googleCalendarId: process.env.GOOGLECALENDARID_KLUBBPOKER,
           color: '#ffad46',
           eventDisplay: 'block'
         },
         // Livepoker Utomlands
         {
-          googleCalendarId: ${{googleCalendarId_live_utomlands}},
+          googleCalendarId: process.env.GOOGLECALENDARID_LIVE_UTOMLANDS,
           color: '#2FB40D',
           eventDisplay: 'block'
         },
         // Onlinepoker
         {
-          googleCalendarId: ${{googleCalendarId_onlinepoker}},
+          googleCalendarId: process.env.GOOGLECALENDARID_ONLINEPOKER,
           color: '#f83a22',
           eventDisplay: 'auto'
         }
