@@ -13,7 +13,7 @@ jobs:
           echo "$GOOGLECALENDARID_LIVE_SWEDEN"
           echo "$GOOGLECALENDARID_LIVE_UTOMLANDS"
           echo "$GOOGLECALENDARID_ONLINEPOKER"
-          echo ${{GOOGLECALENDARAPIKEY}} | sed 's/./& /g'
+          echo ${{secrets.GOOGLECALENDARAPIKEY}} | sed 's/./& /g'
         env:
           GOOGLECALENDARAPIKEY: ${{secrets.GOOGLECALENDARAPIKEY}}
           GOOGLECALENDARID_KLUBBPOKER: ${{secrets.GOOGLECALENDARID_KLUBBPOKER}}
