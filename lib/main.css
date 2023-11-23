@@ -1493,3 +1493,74 @@ A VERTICAL event
   background-color: var(--bs-gray-200);
 }
 
+  /* test legend */
+  /* ---------------------------------------------------------------------------------------------------- */
+
+  #block-eventlegend h2 {
+    font-family: "Open Sans";
+    font-size: 1.2em;
+  }
+  
+  #block-eventlegend .term {
+    padding: 10px 20px;
+  }
+  
+  #block-eventlegend table {
+    width: 100%;
+    background: #fafafa;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+  }
+  #block-eventlegend span {
+    display: none;
+  }
+  
+  #block-eventlegend .legend-color {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+  }
+  
+  #block-eventlegend .color {
+    padding: 12px;
+  }
+  
+  #block-eventlegend .canvassing {
+    background: #e8c030;
+  }
+  
+  #block-eventlegend .conference {
+    background: #4c69dc;
+  }
+  
+  #block-eventlegend .election {
+    background: #34baf4;
+  }
+  
+  #block-eventlegend .fundraiser {
+    background: #288637;
+  }
+  
+  #block-eventlegend .general {
+    background: #c943cb;
+  }
+  
+  #block-eventlegend .holiday {
+    background: #fdecaf;
+  }
+  
+  #block-eventlegend .meeting {
+    background: #f042e1;
+  }
+  
+  #block-eventlegend .phone {
+    background: #87b0c4;
+  }
+  
+  #block-eventlegend .rally {
+    background: #f41010;
+  }
+  
+  #block-eventlegend .workshop {
+    background: #112d3b;
+  }
