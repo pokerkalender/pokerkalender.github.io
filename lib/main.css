@@ -1469,7 +1469,7 @@ A VERTICAL event
 
 
   .fc-theme-bootstrap5 a:not([href]) {
-    color: inherit;
+    /* color: inherit; */
     text-decoration: inherit;
   }
 
