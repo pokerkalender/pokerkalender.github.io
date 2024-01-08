@@ -55,12 +55,14 @@
         var eventObj = info.event;
         alert('Starttid: ' + info.event.start + '\n\n' + info.event.title + '\n\n' + info.event.extendedProps.description + '\n\n' );
         info.jsEvent.preventDefault();
+    },
+
+      eventTimeFormat: { // like '14:30:00'
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      meridiem: false
     }
-
-
-//      eventClick: function(info) {
-//        info.jsEvent.preventDefault(); // don't let the browser navigate
-//    }
 
     });
 
