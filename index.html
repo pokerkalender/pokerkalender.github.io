@@ -52,18 +52,13 @@
       ],
 
       eventClick: function(info) {
+        var timeSettings = { "hour": "2-digit", "minute": "2-digit", "hour12": false };
+        var starttime = calendar.formatDate(info.event.start,  timeSettings);
+
         var eventObj = info.event;
-        alert('Starttid: ' + info.event.start + '\n\n' + info.event.title + '\n\n' + info.event.extendedProps.description + '\n\n' );
+        alert('Starttid: ' + starttime + '\n\n' + info.event.title + '\n\n' + info.event.extendedProps.description + '\n\n' );
         info.jsEvent.preventDefault();
-    },
-
-      eventTimeFormat: { // like '14:30:00'
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      meridiem: false
     }
-
     });
 
     calendar.render();
