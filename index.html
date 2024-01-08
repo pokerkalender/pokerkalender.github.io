@@ -53,7 +53,7 @@
 
       eventClick: function(info) {
         var eventObj = info.event;
-        alert(info.event.title + '\n\n' + info.event.extendedProps.description);
+        alert(info.event.title + ' - ' + info.event.extendedProps.location + '\n\n' + info.event.extendedProps.description);
         info.jsEvent.preventDefault();
     }
     });
