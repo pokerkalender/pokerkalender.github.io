@@ -53,7 +53,7 @@
 
       eventClick: function(info) {
         var eventObj = info.event;
-        alert(info.event.title + '\nInfo: ' + info.event.extendedProps.description );
+        alert('Starttid: ' + info.event.start + '\n\n' + info.event.title + '\n\n' + info.event.extendedProps.description + '\n\n' );
         info.jsEvent.preventDefault();
     }
 
