@@ -54,6 +54,7 @@
       eventClick: function(info) {
         var eventObj = info.event;
         alert('Description: ' + info.event.extendedProps.description );
+        info.jsEvent.preventDefault();
     }
 
 
