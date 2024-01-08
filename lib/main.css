@@ -1323,7 +1323,7 @@ A VERTICAL event
 
 :root {
   --fc-list-event-dot-width: 10px;
-  --fc-list-event-hover-bg-color: #f5f5f5;
+  --fc-list-event-hover-bg-color: #000000;
 }
 .fc-theme-standard .fc-list {
     border: 1px solid #ddd;
@@ -1431,6 +1431,7 @@ A VERTICAL event
 .fc .fc-list-event-graphic,
   .fc .fc-list-event-time {
     white-space: nowrap;
+    color: #ffffff;
     width: 1px;
   }
 .fc .fc-list-event-dot {
@@ -1449,7 +1450,7 @@ A VERTICAL event
 
 }
 .fc .fc-list-event-title a {
-    color: inherit;
+    color: #ffffff;
     text-decoration: none;
   }
 .fc {
@@ -1492,5 +1493,5 @@ A VERTICAL event
   }
 
 .fc-theme-bootstrap5-shaded {
-  background-color: var(--bs-gray-200);
+  background-color: var(--bs-gray-900);
 }
