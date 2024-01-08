@@ -14,7 +14,7 @@
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
 //      initialView: 'listWeek',
-      defaultView: $(window).width() < 765 ? 'listDay':'listWeek',
+      initialView: window.innerWidth >= 765 ? 'basicDay' : 'basicWeek',
       locale: 'sv',
       themeSystem: 'bootstrap5',
       contentHeight: 'auto',
