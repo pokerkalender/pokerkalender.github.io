@@ -51,10 +51,15 @@
         }
       ],
 
-
       eventClick: function(info) {
-        info.jsEvent.preventDefault(); // don't let the browser navigate
+        var eventObj = info.event;
+        alert('ID: ' + info.event.id + 'Title: ' + info.event.title + 'Start: ' + info.event.start  + 'Description: ' + info.event.extendedProps.description );
     }
+
+
+//      eventClick: function(info) {
+//        info.jsEvent.preventDefault(); // don't let the browser navigate
+//    }
 
     });
 
