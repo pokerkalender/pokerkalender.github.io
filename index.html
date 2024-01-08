@@ -52,11 +52,8 @@
       ],
 
       eventClick: function(info) {
-        var timeSettings = { "hour": "2-digit", "minute": "2-digit", "hour12": false };
-        var starttime = calendar.formatDate(info.event.start,  timeSettings);
-
         var eventObj = info.event;
-        alert('Starttid: ' + starttime + '\n\n' + info.event.title + '\n\n' + info.event.extendedProps.description + '\n\n' );
+        alert(info.event.title + '\n\n' + info.event.extendedProps.description);
         info.jsEvent.preventDefault();
     }
     });
