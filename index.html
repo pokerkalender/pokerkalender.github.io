@@ -53,7 +53,7 @@
 
       eventClick: function(info) {
         var eventObj = info.event;
-        alert('Spel: ' + info.event.title + 'Info: ' + info.event.extendedProps.description );
+        alert(info.event.title + ' - Info: ' + info.event.extendedProps.description );
         info.jsEvent.preventDefault();
     }
 
