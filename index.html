@@ -57,7 +57,12 @@
         var eventObj = info.event;
         alert(info.event.title + ' - ' + info.event.extendedProps.location + '\n\n' + info.event.extendedProps.description);
         info.jsEvent.preventDefault();
-    }
+    },
+      headerToolbar: {
+        left: 'prev,next today myCustomButton',
+        center: 'title',
+        right: 'dayGridMonth,listMonth'
+      }
     });
 
     calendar.render();
